@@ -1,11 +1,11 @@
 import React from 'react'
 
-import WidgetsDropdown from '../widgets/WidgetsDropdown'
+// import WidgetsDropdown from '../widgets/WidgetsDropdown'
 
 const Dashboard = () => {
   return (
     <>
-      <WidgetsDropdown className="mb-4" />
+    <h1>Dashboard</h1>
     </>
   )
 }

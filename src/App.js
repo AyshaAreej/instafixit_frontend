@@ -1,6 +1,8 @@
 import React, { Suspense, useEffect } from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 import { CSpinner, useColorModes } from '@coreui/react'
 import './scss/style.scss'
@@ -51,6 +53,7 @@ const App = () => {
           <Route exact path="/500" name="Page 500" element={<Page500 />} />
           <Route path="*" name="Home" element={<DefaultLayout />} />
         </Routes>
+              <ToastContainer style={{ zIndex: 99999 }} />
       </Suspense>
     </HashRouter>
   )
