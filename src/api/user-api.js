@@ -6,7 +6,7 @@ class UserApi {
   addUserApi = async (data) => {
     return ApiService.post('user', data, {
       ...headers,
-      // Authorization: `Bearer ${getToken()}`,
+      Authorization: `Bearer ${getToken()}`,
     })
       .then((result) => ({
         error: false,
@@ -23,7 +23,7 @@ class UserApi {
    getUsersApi = async (page,limit) => {
     return ApiService.get(`user`+`?page=${page}&limit=${limit}`, {
       ...headers,
-      // Authorization: `Bearer ${getToken()}`,
+      Authorization: `Bearer ${getToken()}`,
     })
       .then((result) => {
         return {
@@ -73,7 +73,7 @@ class UserApi {
   }
 
   updateUserApi = async (id, data) => {
-    return ApiService.put(`user/${id}`, data, {
+    return ApiService.put(`user/update-user/${id}`, data, {
       ...headers,
       Authorization: `Bearer ${getToken()}`,
     })

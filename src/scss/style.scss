@@ -65,3 +65,25 @@ body {
     --cui-footer-bg: var(--cui-body-bg);
   }
 }
+.table-container {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.table-row-light {
+  background-color: #ffffff;
+}
+
+.table-row-alt {
+  background-color: #f9f9f9;
+}
+
+.table-container .table-light th {
+  font-weight: 600;
+  background-color: #f1f3f5 !important;
+}
+
+.table-container .table-hover tbody tr:hover {
+  background-color: #e6f0ff;
+}

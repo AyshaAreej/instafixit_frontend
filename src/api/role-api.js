@@ -6,7 +6,7 @@ class RoleApi {
   getRolesApi = async (id) => {
     return ApiService.get(`roles`, {
       ...headers,
-      //   Authorization: `Bearer ${getToken()}`,
+        Authorization: `Bearer ${getToken()}`,
     })
       .then((result) => ({
         error: false,

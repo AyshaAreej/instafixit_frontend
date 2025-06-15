@@ -19,6 +19,11 @@ const INITIAL_STATE = {
       {
         label: 'Email',
         field: 'email',
+        width: 270,
+      },
+      {
+        label: 'Action',
+        field: 'action',
         width: 200,
       },
     ],

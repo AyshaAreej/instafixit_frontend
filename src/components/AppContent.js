@@ -1,9 +1,7 @@
-import React, { Suspense } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import { CContainer, CSpinner } from '@coreui/react'
-
-// routes config
-import routes from '../routes'
+import React, { Suspense } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { CContainer, CSpinner } from '@coreui/react';
+import routes from '../routes';
 
 const AppContent = () => {
   return (
@@ -16,18 +14,17 @@ const AppContent = () => {
                 <Route
                   key={idx}
                   path={route.path}
-                  exact={route.exact}
-                  name={route.name}
-                  element={<route.element />}
+                  element={route.element}
                 />
               )
-            )
+            );
           })}
-          <Route path="/" element={<Navigate to="dashboard" replace />} />
+          {/* Redirect root to /dashboard */}
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </Suspense>
     </CContainer>
-  )
-}
+  );
+};
 
-export default React.memo(AppContent)
+export default React.memo(AppContent);
